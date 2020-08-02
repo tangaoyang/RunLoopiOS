@@ -14,6 +14,7 @@
 		8618FF5124D5AEDC0013E584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8618FF4F24D5AEDC0013E584 /* LaunchScreen.storyboard */; };
 		8618FF5424D5AEDC0013E584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8618FF5324D5AEDC0013E584 /* main.m */; };
 		8618FF5C24D5AF110013E584 /* TAYThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 8618FF5B24D5AF110013E584 /* TAYThread.m */; };
+		8682E9C124D6B4EB00DF3311 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8682E9C024D6B4EB00DF3311 /* NewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		8618FF5324D5AEDC0013E584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8618FF5A24D5AF110013E584 /* TAYThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAYThread.h; sourceTree = "<group>"; };
 		8618FF5B24D5AF110013E584 /* TAYThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAYThread.m; sourceTree = "<group>"; };
+		8682E9BF24D6B4EB00DF3311 /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		8682E9C024D6B4EB00DF3311 /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				8618FF4524D5AED10013E584 /* AppDelegate.m */,
 				8618FF4724D5AED10013E584 /* ViewController.h */,
 				8618FF4824D5AED10013E584 /* ViewController.m */,
+				8682E9BF24D6B4EB00DF3311 /* NewViewController.h */,
+				8682E9C024D6B4EB00DF3311 /* NewViewController.m */,
 				8618FF4A24D5AED10013E584 /* Main.storyboard */,
 				8618FF4D24D5AEDC0013E584 /* Assets.xcassets */,
 				8618FF4F24D5AEDC0013E584 /* LaunchScreen.storyboard */,
@@ -148,6 +153,7 @@
 			files = (
 				8618FF5C24D5AF110013E584 /* TAYThread.m in Sources */,
 				8618FF4924D5AED10013E584 /* ViewController.m in Sources */,
+				8682E9C124D6B4EB00DF3311 /* NewViewController.m in Sources */,
 				8618FF5424D5AEDC0013E584 /* main.m in Sources */,
 				8618FF4624D5AED10013E584 /* AppDelegate.m in Sources */,
 			);

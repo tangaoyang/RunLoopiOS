@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TAYThread.h"
+#import "NewViewController.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) TAYThread *aThread;
@@ -19,30 +20,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 添加一个停止RunLoop的按钮
-    UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.view addSubview:stopButton];
-    stopButton.frame = CGRectMake(180, 180, 100, 50);
-    stopButton.titleLabel.font = [UIFont systemFontOfSize:20];
-    [stopButton setTitle:@"stop" forState:UIControlStateNormal];
-    stopButton.tintColor = [UIColor blackColor];
-    [stopButton addTarget:self action:@selector(stop) forControlEvents:UIControlEventTouchUpInside];
     
-    self.stopped = NO;
-    __weak typeof(self) weakSelf = self;
-    self.aThread = [[TAYThread alloc] initWithBlock:^{
-        NSLog(@"go");
-        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
-        while (!weakSelf.isStoped) {
-            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-        }
-        NSLog(@"ok");
-    }];
-    [self.aThread start];
+    
+//    // 添加一个停止RunLoop的按钮
+//    UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [self.view addSubview:stopButton];
+//    stopButton.frame = CGRectMake(180, 180, 100, 50);
+//    stopButton.titleLabel.font = [UIFont systemFontOfSize:20];
+//    [stopButton setTitle:@"stop" forState:UIControlStateNormal];
+//    stopButton.tintColor = [UIColor blackColor];
+//    [stopButton addTarget:self action:@selector(stop) forControlEvents:UIControlEventTouchUpInside];
+//
+//    self.stopped = NO;
+//    __weak typeof(self) weakSelf = self;
+//    self.aThread = [[TAYThread alloc] initWithBlock:^{
+//        NSLog(@"go");
+//        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+//        while (!weakSelf.isStoped) {
+//            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+//        }
+//        NSLog(@"ok");
+//    }];
+//    [self.aThread start];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self performSelector:@selector(doSomething) onThread:self.aThread withObject:nil waitUntilDone:NO];
+    NewViewController *new = [[NewViewController alloc] init];
+    [self presentViewController:new animated:NO completion: nil];
 }
 
 // 子线程需要执行的任务
